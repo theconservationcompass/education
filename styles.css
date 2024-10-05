@@ -51,6 +51,11 @@ ul li a:hover {
     background-color: #706677;
 }
 
+ul li a.active {
+    background-color: #D6C7CB; 
+    color: #A6808C; 
+}
+
 /* Main Content Styles */
 main {
     padding: 20px;
