@@ -130,3 +130,18 @@ p {
     border: 1px solid #565264; /* Border for the panel */
     margin-bottom: 10px; /* Space between panels */
 }
+
+/* Ensure the container of the tableau-viz is responsive */
+.tableau-container {
+    width: 100%; /* Full width */
+    height: 100%; /* Adjust height as needed */
+    overflow: hidden; /* Hide overflow */
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .tableau-container {
+        height: 400px; /* Adjust height for smaller screens */
+    }
+}
+
