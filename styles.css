@@ -51,9 +51,10 @@ ul li a:hover {
     background-color: #706677;
 }
 
-ul li a.active {
-    background-color: #D6C7CB; 
-    color: #A6808C; 
+/* Active Link Styles */
+ul li a.used {
+    background-color: #D6C7CB; /* Matches the background color */
+    color: #A6808C; /* Keep the text color */
 }
 
 /* Main Content Styles */
@@ -69,3 +70,63 @@ p {
     line-height: 1.6;
 }
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    ul {
+        flex-direction: column; /* Stack list items vertically */
+        width: 100%; /* Full width */
+    }
+
+    ul li {
+        width: 100%; /* Each button takes full width */
+    }
+
+    ul li a {
+        text-align: center; /* Center text */
+        padding: 15px; /* More padding for easier touch */
+    }
+}
+
+/* Accordion Styles */
+.accordion {
+    background-color: #A6808C; /* Color of accordion header */
+    color: white; /* Text color */
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-bottom: 5px;
+}
+
+.accordion:hover {
+    background-color: #706677; /* Darker on hover */
+}
+
+.active, .accordion:after {
+    content: '−'; /* Minus sign for active items */
+    font-weight: bold;
+    float: right; /* Position the symbol to the right */
+}
+
+.accordion:after {
+    content: '+'; /* Plus sign for inactive items */
+    font-weight: bold;
+}
+
+.panel {
+    padding: 0 15px;
+    display: none; /* Hidden by default */
+    overflow: hidden;
+    background-color: #D6C7CB; /* Background color for panel */
+    border: 1px solid #565264; /* Border for the panel */
+    margin-bottom: 10px; /* Space between panels */
+}
