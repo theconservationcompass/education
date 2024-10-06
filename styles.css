@@ -14,17 +14,16 @@ header {
 nav {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     padding: 10px 20px;
 }
 
 .logo img {
-    width: 100px; /* Adjust the width of your logo */
+    width: 125px; /* Adjust the width of your logo */
     height: auto; /* Keeps the aspect ratio */
-    padding-bottom: 10px;
 }
 
-ul {
+nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -32,11 +31,12 @@ ul {
     gap: 20px;
 }
 
-ul li {
-    display: relative;
+nav ul li {
+    display: flex; /* Keep the items flexible */
+    align-items: flex-end; /* Align items to the bottom */
 }
 
-ul li a {
+nav ul li a {
     text-decoration: none;
     color: #A49966;
     font-size: 16px;
@@ -46,15 +46,15 @@ ul li a {
     white-space: nowrap; /* Prevent text from wrapping */
 }
 
-ul li a:hover {
-    background-color: #B89E97;
-    color: #605C4E; /* Keep the text color */
+nav ul li a:hover {
+    background-color: #4A4A48;
+    color: #A49966; /* Keep the text color */
 }
 
 /* Active Link Styles */
-ul li a.used {
-    background-color: #F0DCCA; /* Matches the background color */
-    color: #A49966; /* Keep the text color */
+nav ul li a.used {
+    background-color: #C7C7A6; /* Matches the background color */
+    color: #605C4E; /* Keep the text color */
 }
 
 /* Main Content Styles */
@@ -70,23 +70,34 @@ p {
     line-height: 1.6;
 }
 
-/* Responsive Styles */
+/* Media Query for Responsive Navbar */
+/* Media Query for Responsive Navbar */
 @media (max-width: 768px) {
     nav {
-        flex-direction: column; /* Stack elements vertically */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center all items */
+        padding: 10px; /* Adjust padding for mobile */
     }
 
-    ul {
+    nav ul {
         flex-direction: column; /* Stack list items vertically */
-        gap: 10px; /* Adjust spacing between items */
-        align-items:center; /* Align items to the left */
+        width: auto; /* Set width to auto for centering */
+        padding: 0; /* Remove padding */
+        align-items: center; /* Center the buttons */
     }
 
-    ul li a {
-        width: 100%; /* Make the links take up full width on smaller screens */
-        text-align: left; /* Align the text to the left */
+    nav ul li {
+        text-align: center; /* Center text in list items */
+    }
+
+    nav ul li a {
+        padding: 15px; /* Adjust padding for mobile links */
+        font-size: 14px; /* Reduce font size */
+        display: inline-block; /* Keep button width based on content */
     }
 }
+
+
 
 /* Accordion Styles */
 .accordion {
@@ -138,6 +149,89 @@ p {
 @media (max-width: 768px) {
     .tableau-container {
         height: 400px; /* Adjust height for smaller screens */
+    }
+}
+
+/* Email Us Button */
+.email-link {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #C7C7A6; /* Matching text color from your palette */
+    color: #A49966; /* White text for better contrast */
+    text-decoration: none; /* Remove the underline */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Adjust font size */
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover Effect */
+.email-link:hover {
+    background-color: #605C4E; /* Darker shade on hover */
+    transform: scale(1.05); /* Slight scaling on hover */
+}
+
+/* Profile Section Styles */
+#profiles {
+    padding: 40px 20px;
+    text-align: center; /* Center the text in the section */
+}
+
+.profile-container {
+    display: flex;
+    justify-content: flex-start; /* Center the cards horizontally */
+    gap: 40px; /* Space between the cards */
+}
+
+/* Profile Card Styles */
+.profile-card {
+    background-color: #C7C7A6; /* Background color matching the website palette */
+    border-radius: 10px; /* Rounded corners for the card */
+    padding: 20px;
+    width: 250px; /* Set a fixed width for the cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: relative; /* Set the card to relative position */
+    height: 350px; /* Set a fixed height for the card */
+}
+
+/* Profile Image Styles */
+.profile-image {
+    width: 100px; /* Set the width of the image */
+    height: 100px; /* Set the height of the image */
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Maintain the aspect ratio of the image */
+    margin-bottom: 15px; /* Space between the image and text */
+}
+
+/* Bio Styles */
+.bio {
+    font-size: 14px;
+    color: #605C4E; /* Use a color that matches the palette */
+    margin-bottom: 50px; /* Space between bio and link */
+}
+
+/* LinkedIn Link Styles */
+.linkedin-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #A49966; /* Match the color palette */
+    border: 1px solid #605C4E; /* Outline style */
+    padding: 8px 15px; /* Padding for the link */
+    border-radius: 5px; /* Rounded corners for the link */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+    position: absolute; /* Absolute positioning */
+    bottom: 20px; /* Position it 20px from the bottom of the card */
+}
+
+/* LinkedIn Link Hover Effect */
+.linkedin-link:hover {
+    background-color: #4A4A48; /* Change background on hover */
+    color: #E5ECF4; /* Change text color on hover */
+}
+
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column; /* Stack cards vertically on smaller screens */
+        align-items: flex-start; /* Center items */
     }
 }
 
