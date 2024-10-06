@@ -2,13 +2,13 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #D6C7CB;
-    color: #A6808C;
+    background-color: #E5ECF4;
+    color: #A49966;
 }
 
 /* Navbar Styles */
 header {
-    background-color: #565264;
+    background-color: #605C4E;
 }
 
 nav {
@@ -18,12 +18,10 @@ nav {
     padding: 10px 20px;
 }
 
-.logo {
-    width: 50px;
-    height: 50px;
-    background-color: #706677;
-    border-radius: 50%;
-    display: inline-block;
+.logo img {
+    width: 100px; /* Adjust the width of your logo */
+    height: auto; /* Keeps the aspect ratio */
+    padding-bottom: 10px;
 }
 
 ul {
@@ -35,26 +33,28 @@ ul {
 }
 
 ul li {
-    display: inline;
+    display: relative;
 }
 
 ul li a {
     text-decoration: none;
-    color: #A6808C;
+    color: #A49966;
     font-size: 16px;
     padding: 10px 15px;
     border-radius: 5px;
     transition: background-color 0.3s;
+    white-space: nowrap; /* Prevent text from wrapping */
 }
 
 ul li a:hover {
-    background-color: #706677;
+    background-color: #B89E97;
+    color: #605C4E; /* Keep the text color */
 }
 
 /* Active Link Styles */
 ul li a.used {
-    background-color: #D6C7CB; /* Matches the background color */
-    color: #A6808C; /* Keep the text color */
+    background-color: #F0DCCA; /* Matches the background color */
+    color: #A49966; /* Keep the text color */
 }
 
 /* Main Content Styles */
@@ -63,7 +63,7 @@ main {
 }
 
 h1, h2 {
-    color: #565264;
+    color: #605C4E;
 }
 
 p {
@@ -74,27 +74,23 @@ p {
 @media (max-width: 768px) {
     nav {
         flex-direction: column; /* Stack elements vertically */
-        align-items: flex-start; /* Align items to the start */
     }
 
     ul {
         flex-direction: column; /* Stack list items vertically */
-        width: 100%; /* Full width */
-    }
-
-    ul li {
-        width: 100%; /* Each button takes full width */
+        gap: 10px; /* Adjust spacing between items */
+        align-items:center; /* Align items to the left */
     }
 
     ul li a {
-        text-align: center; /* Center text */
-        padding: 15px; /* More padding for easier touch */
+        width: 100%; /* Make the links take up full width on smaller screens */
+        text-align: left; /* Align the text to the left */
     }
 }
 
 /* Accordion Styles */
 .accordion {
-    background-color: #A6808C; /* Color of accordion header */
+    background-color: #A49966; /* Color of accordion header */
     color: white; /* Text color */
     cursor: pointer;
     padding: 15px;
@@ -108,17 +104,16 @@ p {
 }
 
 .accordion:hover {
-    background-color: #706677; /* Darker on hover */
+    background-color: #605C4E; /* Walnut Darker on hover */
 }
 
 .active, .accordion:after {
-    content: '−'; /* Minus sign for active items */
     font-weight: bold;
     float: right; /* Position the symbol to the right */
+    background-color: #605C4E;
 }
 
 .accordion:after {
-    content: '+'; /* Plus sign for inactive items */
     font-weight: bold;
 }
 
@@ -126,9 +121,10 @@ p {
     padding: 0 15px;
     display: none; /* Hidden by default */
     overflow: hidden;
-    background-color: #D6C7CB; /* Background color for panel */
+    background-color: #C7C7A6; /* Background color for panel */
     border: 1px solid #565264; /* Border for the panel */
     margin-bottom: 10px; /* Space between panels */
+    color: #605C4E; /* Text color */
 }
 
 /* Ensure the container of the tableau-viz is responsive */
