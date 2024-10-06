@@ -21,10 +21,9 @@ nav {
 .logo img {
     width: 100px; /* Adjust the width of your logo */
     height: auto; /* Keeps the aspect ratio */
-    padding-bottom: 10px;
 }
 
-ul {
+nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -32,11 +31,11 @@ ul {
     gap: 20px;
 }
 
-ul li {
+nav ul li {
     display: relative;
 }
 
-ul li a {
+nav ul li a {
     text-decoration: none;
     color: #A49966;
     font-size: 16px;
@@ -46,15 +45,15 @@ ul li a {
     white-space: nowrap; /* Prevent text from wrapping */
 }
 
-ul li a:hover {
-    background-color: #B89E97;
-    color: #605C4E; /* Keep the text color */
+nav ul li a:hover {
+    background-color: #4A4A48;
+    color: #A49966; /* Keep the text color */
 }
 
 /* Active Link Styles */
-ul li a.used {
-    background-color: #F0DCCA; /* Matches the background color */
-    color: #A49966; /* Keep the text color */
+nav ul li a.used {
+    background-color: #C7C7A6; /* Matches the background color */
+    color: #605C4E; /* Keep the text color */
 }
 
 /* Main Content Styles */
@@ -76,15 +75,21 @@ p {
         flex-direction: column; /* Stack elements vertically */
     }
 
-    ul {
+    nav ul {
         flex-direction: column; /* Stack list items vertically */
         gap: 10px; /* Adjust spacing between items */
         align-items:center; /* Align items to the left */
     }
 
-    ul li a {
+    nav ul li a {
         width: 100%; /* Make the links take up full width on smaller screens */
         text-align: left; /* Align the text to the left */
+    }
+    
+    .logo img {
+        width: 100px; /* Adjust the width of your logo */
+        height: auto; /* Keeps the aspect ratio */
+        padding-bottom: 10px;
     }
 }
 
