@@ -70,6 +70,10 @@ p {
     line-height: 1.6;
 }
 
+ul {
+    line-height: 1.6;
+}
+
 /* Media Query for Responsive Navbar */
 /* Media Query for Responsive Navbar */
 @media (max-width: 768px) {
